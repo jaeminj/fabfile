@@ -3,7 +3,7 @@
 from fabric.api import *
 
 
-env.hosts = [ '115.68.184.98']
+env.hosts = [ '115.68.184.118']
 env.user= 'root'
 env.password = prompt('PASSWORD:')
 
@@ -77,6 +77,8 @@ def install():
     update_server()
     install_ppa_libreoffice()
     install_key_for_bbb()
+    install_ffmpeg()
+    install_bbb()
     enableWebRTCAudio()
     getConf()
 
